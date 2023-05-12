@@ -8,7 +8,18 @@ Utilice pandas para leer el csv de los libros he importarlos mediante management
 
 Cree los views para el crud y todo esta listo para ser consumido por postman
 http://127.0.0.1:8000/books/ la url para listar todos los libros
+http://127.0.0.1:8000/books/ para crear
+http://127.0.0.1:8000/books/{id}/ para actualizar
+http://127.0.0.1:8000/books/{id}/ para borrar
 
+Cabe recalcar que en las solicitudes de POST para crear y actualizar un book mediante postman nos pide un body en el cual debe tener lo siguiente:
+{
+    "title": "This field is required.",
+    "author": "This field is required.",
+    "yearOfPublication": "This field is required."
+    "publisher": "This field is required."
+}
+En caso tal no colocar nada en el body, el servidor nos dara la respuesta de que estas son requeridas.
 
 la base de datos que utilice fue la que trae por defecto Django, sqlite
 
